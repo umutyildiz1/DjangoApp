@@ -28,4 +28,4 @@ def register(request):
   return render(request,"register.html")
 
 def homePage(request):
-  return render(request,"register.html")
+  return render(request,"homePage.html")
