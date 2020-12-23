@@ -27,4 +27,5 @@ urlpatterns = [
     path('arizaDetay/', views.arizaDetay,name="arizaDetay"),
     path('login/', views.login,name="login"),
     path('register/', views.register,name="register"),
+    path('homePage/', views.homePage,name="homePage"),
 ]

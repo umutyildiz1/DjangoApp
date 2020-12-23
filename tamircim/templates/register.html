@@ -2,110 +2,83 @@
 {% load static %}
 {% block body %}
 
-<link rel="stylesheet" href="{% static 'login.css' %}">
-<div class="formContainer">
-    <form method="post" action="http://localhost:3000/test">
+<link rel="stylesheet" href="{% static 'register.css' %}">
 
-        <div class="nameDiv">
-            <div class="nameText">
-                <p>Name:</p>
-            </div>
-            <div class="nameInput">
-                <input type="text" id="name" placeholder="Enter your name">
-            </div>
-        </div>
+<div class="container">
+    <div class="formContainer">
 
-        <div class="surnameDiv">
-            <div class="surnameText">
-                <p>Surname:</p>
-            </div>
-            <div class="surnameInput">
-                <input type="text" id="surname" placeholder="Enter your surname">
-            </div>
-        </div>
 
-        <div class="emailDiv">
-            <div class="emailText">
-                <p>Email Address:</p>
+            <div class="nameDiv">
+                <div class="nameText">
+                    <p>Name:</p>
+                </div>
+                <div class="nameInput">
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
             </div>
-            <div class="emailInput">
-                <input type="email" id="email" placeholder="...@gmail.com ">
-            </div>
-        </div>
 
-        <div class="pwdDiv">
-            <div class="pwdText">
-                <p>Password:</p>
+            <div class="surnameDiv">
+                <div class="surnameText">
+                    <p>Surname:</p>
+                </div>
+                <div class="surnameInput">
+                    <input type="text" id="surname" placeholder="Enter your surname">
+                </div>
             </div>
-            <div class="pwdInput">
-                <input type="password" id="pwd" placeholder="Enter your password here" required>
-            </div>
-        </div>
 
-        <div class="genderDiv">
-            <div class="genderText">
-                <p>Gender:</p>
+            <div class="emailDiv">
+                <div class="emailText">
+                    <p>Email Address:</p>
+                </div>
+                <div class="emailInput">
+                    <input type="email" id="email" placeholder="...@gmail.com ">
+                </div>
             </div>
-            <div class="genderInput">
-                <select id="gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
-            </div>
-        </div>
 
-        <div class="cellDiv">
-            <div class="cellText">
-                <p>Cellphone Number:</p>
+            <div class="pwdDiv">
+                <div class="pwdText">
+                    <p>Password:</p>
+                </div>
+                <div class="pwdInput">
+                    <input type="password" id="pwd" placeholder="Enter your password here" required>
+                </div>
             </div>
-            <div class="cellInput">
-                <input type="tel" id="cellNo" placeholder="Enter your cellphone number here">
-            </div>
-        </div>
 
-        <div class="birthDiv">
-            <div class="birthText">
-                <p>Birth Date:</p>
+            <div class="genderDiv">
+                <div class="genderText">
+                    <p>Gender:</p>
+                </div>
+                <div class="genderInput">
+                    <select id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
             </div>
-            <div class="birthInput">
-                <input type="date" id="birth" placeholder="gg.aa.yyyy">
-            </div>
-        </div>
 
-        <div class="securityDiv">
-            <div class="securityText">
-                <p>Security Question:</p>
+            <div class="cellDiv">
+                <div class="cellText">
+                    <p>Cellphone Number:</p>
+                </div>
+                <div class="cellInput">
+                    <input type="tel" id="cellNo" placeholder="Enter your cellphone number here">
+                </div>
             </div>
-            <div class="securityInput">
-                <select id="security">
-                    <option value="Favourite fruit">Favourite fruit</option>
-                    <option value="Fav vegetable">Fav vegetable</option>
-                    <option value="Fav pet">Fav pet</option>
-                    <option value="Fav teacher">Fav Teacher</option>
-                </select>
-            </div>
-        </div>
 
-        <div class="answerDiv">
-            <div class="answerText">
-                <p>Your answer:</p>
+            <div class="birthDiv">
+                <div class="birthText">
+                    <p>Birth Date:</p>
+                </div>
+                <div class="birthInput">
+                    <input type="date" id="birth" placeholder="gg.aa.yyyy">
+                </div>
             </div>
-            <div class="answerInput">
-                <input type="text" id="answer" placeholder="Enter your answer">
-            </div>
-        </div>
 
-        <div class="buttonDiv">
-            <button id="loginButton" onclick="login()">Register</button>
-            <input type="submit" value="Submit" />
-        </div>
-
-        <div class="lastDiv">
-            <div class="checkBoxDiv">
-                <input type="checkBox" id="box">
-                <label for="box" id="checkLabel">Show Password</label>
+            <div class="buttonDiv">
+                <button id="loginButton" onclick="login()">Register</button>
             </div>
-        </div>
-    </form>
+
+
+    </div>
 </div>
     {% endblock body %}
