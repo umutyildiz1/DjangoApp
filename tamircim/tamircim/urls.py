@@ -22,4 +22,5 @@ urlpatterns = [
     path('arizaolustur/', views.arizaolustur,name="arizaolustur"),
     path('acikarizalar/', views.acikarizalar,name="acikarizalar"),
     path('map/', views.map,name="map"),
+    path('updateProfile/', views.updateProfile,name="updateProfile"),
 ]

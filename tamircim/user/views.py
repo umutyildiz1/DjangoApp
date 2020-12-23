@@ -11,3 +11,6 @@ def acikarizalar(request):
 
 def map(request):
   return render(request,"map.html")
+
+def updateProfile(request):
+  return render(request,"updateProfile.html")
