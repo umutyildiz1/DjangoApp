@@ -20,3 +20,6 @@ def mesajlarım(request):
 
 def arizaDetay(request):
   return render(request,"arizadetay.html")
+
+def login(request):
+  return render(request,"login.html.html")
