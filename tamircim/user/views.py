@@ -14,3 +14,9 @@ def map(request):
 
 def updateProfile(request):
   return render(request,"updateProfile.html")
+
+def mesajlarım(request):
+  return render(request,"mesaj.html")
+
+def arizaDetay(request):
+  return render(request,"arizadetay.html")

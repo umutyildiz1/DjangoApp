@@ -23,4 +23,6 @@ urlpatterns = [
     path('acikarizalar/', views.acikarizalar,name="acikarizalar"),
     path('map/', views.map,name="map"),
     path('updateProfile/', views.updateProfile,name="updateProfile"),
+    path('mesajlarım/', views.mesajlarım,name="mesajlarım"),
+    path('arizaDetay/', views.arizaDetay,name="arizaDetay"),
 ]
