@@ -25,4 +25,5 @@ urlpatterns = [
     path('updateProfile/', views.updateProfile,name="updateProfile"),
     path('mesajlarım/', views.mesajlarım,name="mesajlarım"),
     path('arizaDetay/', views.arizaDetay,name="arizaDetay"),
+    path('login/', views.login(),name="login"),
 ]
