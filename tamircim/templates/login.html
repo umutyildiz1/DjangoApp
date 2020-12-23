@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 {% load static %}
 {% block body %}
+
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <div class ="container">
     <div class="formContainer">
             <div class="emailDiv">
                 <div class="emailText">
@@ -35,5 +38,6 @@
             </div>
 
         </div>
+    </div>
 
     {% endblock body %}
