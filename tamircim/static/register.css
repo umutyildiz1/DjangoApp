@@ -1,8 +1,9 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 1vh 0.5vw;
+    margin-top: 8vh;
     padding: 1vh 0.5vw;
+    justify-self: center;
 }
 
 .formContainer {
@@ -149,41 +150,13 @@ select {
     box-sizing: border-box;
 }
 
-.securityDiv {
-    margin: 1vh 4vw 0vh;
-    padding: 1vh 1vw;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    justify-content: space-between;
-    height: 6vh;
-    min-height: 30px;
-    width: 30vw;
-    min-width: 250px;
-    box-sizing: border-box;
-}
-
-.answerDiv {
-    margin: 1vh 4vw 0vh;
-    padding: 1vh 1vw;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    justify-content: space-between;
-    height: 6vh;
-    min-height: 30px;
-    width: 30vw;
-    min-width: 250px;
-    box-sizing: border-box;
-}
-
-
 .buttonDiv {
     margin: 2vh 4vw;
     padding: 1vh 1vw;
     display: flex;
     align-items: center;
     justify-self: center;
+    justify-items: center;
 }
 
 #loginButton {
@@ -213,23 +186,5 @@ select {
   }
 
 
-.lastDiv {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 6vh;
-    min-height: 30px;
-    width: 50vw;
-    min-width: 250px;
-  }
-
-  #checkLabel {
-      font-size: large;
-  }
-
-  .registerDiv {
-      justify-self: center;
-      margin-top: 5vh;
-  }
 
 
