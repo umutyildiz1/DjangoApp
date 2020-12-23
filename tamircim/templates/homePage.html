@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="{% static 'homePage.css' %}">
+
+    <div class="container">
+    <div class="textDiv">
+        <div class="welcomeText">
+            <h1>Welcome to Viatorem</h1>
+        </div>
+    </div>
+
+    <div class="imageDiv">
+        <div class="image1Div">
+        <img src="images/bus.jpg" id="leftImage">
+        </div>
+        <div class="image2Div">
+            <img src="images/bus2.jpg" id="centerImage">
+        </div>
+        <div class="image3Div">
+        <img src="images/bus.jpg" id="rightImage">
+        </div>
+    </div>
+</div>
+{% endblock body %}
