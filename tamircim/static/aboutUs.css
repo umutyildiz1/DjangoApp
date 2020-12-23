@@ -1,0 +1,9 @@
+.container {
+    margin-top: 20vh;
+    padding: 5vh 5vw;
+    justify-items: center;
+}
+
+.textDiv {
+    font-size: 15px;
+}
