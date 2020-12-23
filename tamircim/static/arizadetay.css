@@ -1,0 +1,14 @@
+div #box{
+    
+    border: 1px solid;
+    border-color:darkblue;
+}
+button{
+    margin-top: 20px;
+    margin-left: 170px;
+    width: 250px;
+}
+h2{
+    margin-bottom: 50px;
+    margin-left: 200px;
+}

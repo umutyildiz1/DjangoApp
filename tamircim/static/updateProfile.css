@@ -1,0 +1,10 @@
+.btngrp button{
+    width: 150px;
+    position: relative;
+}
+.btngrp{
+    margin-left: 150px;
+}
+h2{
+    margin-left: 200px;
+}
