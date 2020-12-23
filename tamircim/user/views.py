@@ -29,3 +29,6 @@ def register(request):
 
 def homePage(request):
   return render(request,"homePage.html")
+
+def aboutUs(request):
+  return render(request,"aboutUs.html")
