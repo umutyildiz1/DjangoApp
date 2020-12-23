@@ -1,0 +1,205 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1vh 0.5vw;
+    padding: 1vh 0.5vw;
+}
+
+.navDiv {
+    background-color: black;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+
+.upperNav{
+    grid-column: 1/11;
+    display: flex;
+    justify-content: space-between;
+    /*grid-template-columns: repeat(10, minmax(0, 1fr));*/
+}
+
+.upperLeftNav {
+    display: flex;
+}
+
+.upperRightNav{
+    display: flex;
+    /*grid-template-columns: repeat(10, minmax(0, 1fr));*/
+}
+
+
+.lowerNav{
+    grid-column: 1/11;
+    grid-row: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+.navDiv a{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5vh;
+    width: 8vw;
+    min-width: 90px;
+    height: 5vh;
+    color: white;
+}
+
+.navDiv a:hover{
+    background-color: darkgray;
+}
+
+.Centered
+{
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 1.5vh;
+}
+
+.Centerer
+{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.welcomeText {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 3vh 5vw;
+}
+
+.welcomeText h1{
+    font-weight: bold;
+}
+
+.formContainer {
+    padding: 2vh 1vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: center;
+    justify-items: center;
+    align-content: center;
+    background-color: rgb(228, 225, 225);
+    width: 60vw;
+    min-width: 300px;
+    height: 60vh;
+    min-height: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.emailDiv, .pwdDiv {
+    margin: 1vh 4vw;
+    padding: 1vh 1vw;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-between;
+    height: 6vh;
+    min-height: 30px;
+    width: 30vw;
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+.emailText {
+    box-sizing: border-box;
+    font-weight: bolder;
+    font-size: large;
+}
+
+#email {
+    width: 20vw;
+    max-width: 300px;
+    height: 5vh;
+    min-height: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid ;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.pwdText {
+    box-sizing: border-box;
+    font-weight: bolder;
+    font-size: large;
+}
+
+#pwd {
+    width: 20vw;
+    max-width: 300px;
+    height: 5vh;
+    min-height: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid ;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.buttonDiv {
+    margin: 2vh 4vw;
+    padding: 1vh 1vw;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+#loginButton {
+    width: 15vw;
+    min-width: 100px;
+    height: 6vh;
+    min-height: 30px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 1px #212222;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+#loginButton:hover {
+    background-color: #212222;
+    transition: background-color 0.2s;
+}
+
+#loginButton:active {
+    background-color: #212222;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transform: translateY(3px);
+  }
+
+
+.lastDiv {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 6vh;
+    min-height: 30px;
+    width: 50vw;
+    min-width: 250px;
+  }
+
+  #checkLabel {
+      font-size: large;
+  }
+
+  .registerDiv {
+      justify-self: center;
+      margin-top: 5vh;
+  }
+
+
