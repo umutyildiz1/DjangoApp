@@ -1,0 +1,49 @@
+#messageBox{
+    border: solid darksalmon 3px;
+    width: 50%;
+    position: relative;
+    margin-left: 400px;
+    margin-top: 0px;
+    border-radius: 25px;
+}
+.list-group{
+    margin-left: 10px;
+    margin-top: 100px;
+    width: 200px;
+}
+#giden{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    border: darkturquoise solid 1px;
+    background-color: lightskyblue;
+    width: 350px;
+    margin-left: 400px;
+    ;
+}
+#gelen{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 25px;
+    border: darkseagreen solid 1px;
+    background-color: lightgreen;
+    width: 350px;
+    margin-left: 10px;
+}
+#gelen p{
+margin-left:8px;
+}
+#giden p{
+    margin-left:138px;
+}
+.messageButton{
+    width: 50%;
+    position: relative;
+    margin-left: 400px;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+.messageButton button{
+    float: right;
+    
+}
