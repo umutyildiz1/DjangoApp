@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block body %}
+<title>Profile</title>
+<link rel="stylesheet" href="{% static 'profile.css' %}">
+
+<div class="container">
+    <div class="formContainer">
+        <div class="nameDiv">
+            <div class="nameText">
+                <p>Name:</p>
+            </div>
+            <div class="nameInput">
+                <input type="text" id="name" value="Ahmet" readonly>
+            </div>
+        </div>
+
+        <div class="surnameDiv">
+            <div class="surnameText">
+                <p>Surname:</p>
+            </div>
+            <div class="surnameInput">
+                <input type="text" id="surname" value="Işık" readonly>
+            </div>
+        </div>
+
+        <div class="emailDiv">
+            <div class="emailText">
+                <p>Email:</p>
+            </div>
+            <div class="emailInput">
+                <input type="email" id="email" value="a.isik@gmail.com" readonly>
+            </div>
+        </div>
+
+        <div class="buttonDiv">
+            <button id="updateProfileButton" onclick="window.location.href='../updateProfile';">Update Profile</button>
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock body %}
