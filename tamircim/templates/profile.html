@@ -6,36 +6,69 @@
 
 <div class="container">
     <div class="formContainer">
-        <div class="nameDiv">
-            <div class="nameText">
-                <p>Name:</p>
-            </div>
-            <div class="nameInput">
-                <input type="text" id="name" value="Ahmet" readonly>
-            </div>
-        </div>
 
-        <div class="surnameDiv">
-            <div class="surnameText">
-                <p>Surname:</p>
-            </div>
-            <div class="surnameInput">
-                <input type="text" id="surname" value="Işık" readonly>
-            </div>
-        </div>
 
-        <div class="emailDiv">
-            <div class="emailText">
-                <p>Email:</p>
+            <div class="nameDiv">
+                <div class="nameText">
+                    <p>Name:</p>
+                </div>
+                <div class="nameInput">
+                    <input type="text" id="name" value="Ahmet" readonly>
+                </div>
             </div>
-            <div class="emailInput">
-                <input type="email" id="email" value="a.isik@gmail.com" readonly>
-            </div>
-        </div>
 
-        <div class="buttonDiv">
-            <button id="updateProfileButton" onclick="window.location.href='../updateProfile';">Update Profile</button>
-        </div>
+            <div class="surnameDiv">
+                <div class="surnameText">
+                    <p>Surname:</p>
+                </div>
+                <div class="surnameInput">
+                    <input type="text" id="surname" value="Işık" readonly>
+                </div>
+            </div>
+
+            <div class="emailDiv">
+                <div class="emailText">
+                    <p>Email Address:</p>
+                </div>
+                <div class="emailInput">
+                    <input type="email" id="email" value="a.isik.@gmail.com " readonly>
+                </div>
+            </div>
+
+            <div class="genderDiv">
+                <div class="genderText">
+                    <p>Gender:</p>
+                </div>
+                <div class="genderInput">
+                    <select id="gender" disabled>
+                        <option value="Male" selected>Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="cellDiv">
+                <div class="cellText">
+                    <p>Cellphone Number:</p>
+                </div>
+                <div class="cellInput">
+                    <input type="tel" id="cellNo" value="535 466 46 35">
+                </div>
+            </div>
+
+            <div class="birthDiv">
+                <div class="birthText">
+                    <p>Birth Date:</p>
+                </div>
+                <div class="birthInput">
+                    <input type="date" id="birth" value="1986-10-17" readonly>
+                </div>
+            </div>
+
+            <div class="buttonDiv">
+                <button id="updateProfileButton" onclick="window.location.href='../updateProfile';">Update Profile</button>
+            </div>
+
 
     </div>
 </div>
