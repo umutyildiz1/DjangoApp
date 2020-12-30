@@ -51,7 +51,7 @@ select {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
-.nameDiv, .surnameDiv, .emailDiv, .pwdDiv, .genderDiv, .cellDiv, .birthDiv {
+.nameDiv, .surnameDiv, .emailDiv, .genderDiv, .cellDiv, .birthDiv {
     margin: 1vh 4vw 0vh;
     padding: 1vh 1vw;
     display: flex;
