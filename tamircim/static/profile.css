@@ -1,0 +1,92 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 8vh;
+    padding: 1vh 0.5vw;
+    justify-self: center;
+}
+
+
+.formContainer {
+    margin-top: 50px;
+    padding: 2vh 1vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: center;
+    justify-items: center;
+    align-content: center;
+    background-color: rgb(228, 225, 225);
+    width: 60vw;
+    min-width: 300px;
+    height: 60vh;
+    min-height: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.emailDiv, .nameDiv, .surnameDiv {
+    margin: 1vh 4vw;
+    padding: 1vh 1vw;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-between;
+    height: 6vh;
+    min-height: 30px;
+    width: 30vw;
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+.emailText, .nameText, .surnameText {
+    box-sizing: border-box;
+    font-weight: bolder;
+    font-size: large;
+}
+
+#email, #name, #surname {
+    width: 20vw;
+    max-width: 300px;
+    height: 5vh;
+    min-height: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid ;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+.buttonDiv {
+    margin: 2vh 4vw;
+    padding: 1vh 1vw;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+#updateProfileButton {
+    width: 15vw;
+    min-width: 100px;
+    height: 6vh;
+    min-height: 30px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 1px #212222;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+#updateProfileButton:hover {
+    background-color: #212222;
+    transition: background-color 0.2s;
+}
+
+#updateProfileButton:active {
+    background-color: #212222;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transform: translateY(3px);
+  }
