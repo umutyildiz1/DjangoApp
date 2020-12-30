@@ -6,9 +6,7 @@
     justify-self: center;
 }
 
-
 .formContainer {
-    margin-top: 50px;
     padding: 2vh 1vw;
     display: grid;
     grid-template-columns: 1fr;
@@ -16,17 +14,45 @@
     justify-items: center;
     align-content: center;
     background-color: rgb(228, 225, 225);
-    width: 60vw;
+    width: 50vw;
     min-width: 300px;
-    height: 60vh;
+    height: 85vh;
     min-height: 200px;
     border: 2px solid black;
     border-radius: 5px;
     box-sizing: border-box;
 }
 
-.emailDiv, .nameDiv, .surnameDiv {
-    margin: 1vh 4vw;
+p {
+    box-sizing: border-box;
+    font-weight: bolder;
+    font-size: large;
+}
+
+input:not([type="checkbox"]) {
+    width: 20vw;
+    max-width: 300px;
+    height: 5vh;
+    min-height: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid ;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+select {
+    width: 20vw;
+    max-width: 300px;
+    height: 5vh;
+    min-height: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid ;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.nameDiv, .surnameDiv, .emailDiv, .pwdDiv, .genderDiv, .cellDiv, .birthDiv {
+    margin: 1vh 4vw 0vh;
     padding: 1vh 1vw;
     display: flex;
     align-items: center;
@@ -39,34 +65,17 @@
     box-sizing: border-box;
 }
 
-.emailText, .nameText, .surnameText {
-    box-sizing: border-box;
-    font-weight: bolder;
-    font-size: large;
-}
-
-#email, #name, #surname {
-    width: 20vw;
-    max-width: 300px;
-    height: 5vh;
-    min-height: 30px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    border: 1px solid ;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-}
-
-
 .buttonDiv {
     margin: 2vh 4vw;
     padding: 1vh 1vw;
     display: flex;
     align-items: center;
     justify-self: center;
+    justify-items: center;
 }
 
 #updateProfileButton {
-    width: 15vw;
+    width: 20vw;
     min-width: 100px;
     height: 6vh;
     min-height: 30px;
@@ -90,3 +99,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     transform: translateY(3px);
   }
+
+
+
+
