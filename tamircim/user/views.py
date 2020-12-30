@@ -32,3 +32,6 @@ def homePage(request):
 
 def aboutUs(request):
   return render(request,"aboutUs.html")
+
+def mesajj(request):
+  return render(request,"mesajj.html")
