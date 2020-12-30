@@ -35,3 +35,6 @@ def aboutUs(request):
 
 def mesajj(request):
   return render(request,"mesajj.html")
+
+def forgotPassword(request):
+  return render(request,"forgotPassword.html")
