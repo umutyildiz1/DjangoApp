@@ -28,3 +28,12 @@ class message(models.Model):
     user=models.ForeignKey("auth.user",on_delete=models.CASCADE)
     to=models.CharField(max_length=250)
     frrom=models.CharField(max_length=250)
+
+class extendedUsers(models.Model):
+    name=models.CharField(max_length=50)
+    surname=models.CharField(max_length=50)
+    email=models.CharField(max_length=255, unique=True)
+    password=models.CharField(max_length=255)
+    gender=models.CharField(max_length=6)
+    phone=models.CharField(max_length=10)
+    birthDay=models.DateField()
