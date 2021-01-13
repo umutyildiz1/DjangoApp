@@ -1,38 +1,24 @@
 {% extends "layout.html" %}
 {% load static %}
 {% block body %}
+{% load crispy_forms_tags %}
+
 
 <link rel="stylesheet" href="{% static 'login.css' %}">
-<div class="container">
-    <div class="formContainer">
-        <div class="emailDiv">
-            <div class="emailText">
-                <p>Email Address:</p>
-            </div>
-            <div class="emailInput">
-                <input type="email" id="email" placeholder="...@gmail.com ">
-            </div>
-        </div>
+<div class="row">
 
-        <div class="pwdDiv">
-            <div class="pwdText">
-                <p>Password:</p>
-            </div>
-            <div class="pwdInput">
-                <input type="password" id="pwd" placeholder="Enter your password here" required>
-            </div>
-        </div>
+    <div class="col-md-6 offset-md-3">
+        <h3>Giriş yap</h3>
+        <hr>
 
-        <div class="buttonDiv">
-            <button id="loginButton" onclick="window.location.href='../homePage';">Login</button>
-        </div>
-
-        <div class="lastDiv">
-            <div class="forgotpwdDiv">
-                <a href="../forgotPassword">Forgot Password?</a>
-            </div>
-        </div>
-
+        <form method="POST">
+            {% csrf_token %}    <!--her formda csrf tokeni yazmak gerekiyor-->
+            {{form|crispy}}
+            <br>
+            <button type="submit" class="btn btn-danger">GİRİŞ YAP</button>
+        
+        
+        </form>
     </div>
 </div>
 
