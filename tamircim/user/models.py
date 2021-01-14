@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 
 # Create your models here.
 
@@ -41,6 +43,7 @@ class message(models.Model):
     frrom=models.CharField(max_length=250)
 
 class extendedUsers(models.Model):
+    user=models.OneToOneField(User, on_delete=models.CASCADE)
     name=models.CharField(max_length=50)
     surname=models.CharField(max_length=50)
     email=models.CharField(max_length=255, unique=True)
