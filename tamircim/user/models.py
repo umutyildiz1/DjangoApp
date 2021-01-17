@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 class ariza(models.Model):
@@ -8,7 +8,15 @@ class ariza(models.Model):
     content=models.TextField()
     created_date=models.DateTimeField(auto_now_add=True)
    
+class ariza1(models.Model):
+     user = models.ForeignKey("auth.user",on_delete=models.CASCADE)
+     sehir=models.CharField(max_length=30,null=True)
+     mahalle=models.CharField(max_length=30,null=True)
+     ariza=models.CharField(max_length=30,null=True)
+     tamirci=models.CharField(max_length=30,null=True)
+     arizadetay=models.CharField(max_length=50,null=True)
 
+    
 
 class tamirci(models.Model):
     tamirci=models.ForeignKey("auth.user",on_delete=models.CASCADE)
@@ -41,6 +49,7 @@ class message(models.Model):
     frrom=models.CharField(max_length=250)
 
 class extendedUsers(models.Model):
+    user=models.OneToOneField(User, on_delete=models.CASCADE)
     name=models.CharField(max_length=50)
     surname=models.CharField(max_length=50)
     email=models.CharField(max_length=255, unique=True)

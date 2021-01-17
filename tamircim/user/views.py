@@ -1,20 +1,19 @@
-from django.shortcuts import render
+
 from django.urls import path
-from .forms import RegisterForm,LoginForm
+from .forms import RegisterForm,LoginForm,arizaform
 
 from django.shortcuts import render,redirect
-
+from django.http import HttpResponse
 
 
 from django.contrib.auth.models import User
 from django.contrib.auth import login,authenticate,logout
+from .models import ariza1
 
 from django.contrib import messages
 # Create your views here.
 
 
-def arizaolustur(request):
-  return render(request,"arizaolustur.html")
 
 def acikarizalar(request):
   return render(request,"acikarizalar.html")
@@ -30,6 +29,27 @@ def mesajlarım(request):
 
 def arizaDetay(request):
   return render(request,"arizadetay.html")
+
+
+  
+def arizaolustur(request):
+
+    form = arizaform(request.POST)
+    if request.method=="POST":
+       form = arizaform(request.POST)
+       if form.is_valid():
+         sehir=request.POST['sehir']
+         mahalle=request.POST['mahalle']
+         ariza=request.POST['ariza']
+         tamirci=request.POST['tamirci']
+         arizadetay=request.POST['arizadetay']
+         userr=request.user
+         newariza=ariza1(user=userr,sehir=sehir,mahalle=mahalle,ariza=ariza,tamirci=tamirci,arizadetay=arizadetay)
+         newariza.save()
+         return redirect("homePage")
+
+    context = {"form":form}
+    return render(request,"arizaolustur.html",context)
 
 
 

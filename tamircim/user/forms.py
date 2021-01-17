@@ -12,7 +12,8 @@ class RegisterForm(forms.Form):
     username=forms.CharField(max_length=50,label="Kullanıcı Adı")
     password=forms.CharField(max_length=10,label="Parola",widget=forms.PasswordInput)
     confirm = forms.CharField(max_length=10,label="Parolayı doğrula",widget=forms.PasswordInput)
-
+    email = forms.EmailField(max_length=50)
+   
     def clean(self):   # clean metodunu override ettik djangonun kendi içinde var ( parola kontrol için)
         username = self.cleaned_data.get("username")
         password = self.cleaned_data.get("password")
@@ -26,4 +27,19 @@ class RegisterForm(forms.Form):
             "password" : password
         }
         return values
+
+
+
+class arizaform(forms.Form):
+    sehir=forms.CharField(max_length=25)
+    mahalle=forms.CharField(max_length=25)
+    ariza=forms.CharField(max_length=25)
+    tamirci=forms.CharField(max_length=25)
+    arizadetay=forms.CharField(max_length=250)
+
+   
+
+
+
+
     

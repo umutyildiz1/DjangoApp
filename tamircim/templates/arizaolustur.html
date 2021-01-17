@@ -7,64 +7,66 @@
 <link rel="stylesheet" href="{% static 'ariza.css' %}">
 
 <br><br><br>
+
+
+<form class="abc" method="POST">
+  {% csrf_token %}
 <div class="cust" >
     <br><br><br>
-<div class="custom-select" style="width:200px;">
-    <select>
-      <option value="0">Şehir Seçiniz:</option>
-      <option value="1">İstanbul</option>
-      <option value="2">Ankara</option>
-      <option value="3">İzmir</option>
+    <div  style="width:200px; height:100px ; display: inline;" >
+      <h4 style="display: inline;">Şehir adını yazınız:</h4>
+      {{form.sehir}}
+      <br><br>
+    
+  </div>
 
-    </select>
+  
+  <div  style="width:200px; height:100px ; display: inline;" >
+    <h4 style="display: inline;">Mahalle adını yazınız:</h4>
+          {{form.mahalle}}
+          <br><br>
+
+   
+  </div>
+
+  
+  <div  style="width:200px; height:100px ; display: inline;" >
+   
+    <h4 style="display: inline;">Arızayı belirtiniz:</h4>
+          {{form.ariza}}
+          <br><br>
+
+   
   </div>
 
 
-  <div class="custom-select" style="width:200px;">
-    <select>
-      <option value="0">Mahalle Seçiniz:</option>
-      <option value="1">Cumhuriyet Mah.</option>
-      <option value="2">Bulgurlu Mah.</option>
-      <option value="3">Namık Kemal Mah.</option>
-
-
-    </select>
-  </div>
-
-  <div class="custom-select" style="width:200px;">
-    <select>
-      <option value="0">Arıza Seçiniz:</option>
-      <option value="1">Çekici</option>
-      <option value="2">Lastik Tamircisi</option>
-      <option value="3">Akü Takviyesi</option>
-
-
-    </select>
-  </div>
-
-
-  <div class="custom-select" style="width:200px;">
-    <select>
-      <option value="0">Tamirci Seçiniz:</option>
-      <option value="1">Ahmet Oto</option>
-      <option value="2">Yıldız Akü</option>
-      <option value="3">Karagöz OtoLastik</option>
-
-
-    </select>
+  <div  style="width:200px; height:100px ; display: inline;" >
+    <h4 style="display: inline;">Tamirci adını yazınız:</h4>
+      {{form.tamirci}}
+        <br>
+    
   </div>
 
 </div>
 
+<br>
+<h4 style="display: inline;">Arıza detaylarını yazınız:</h4>
+  
+  {{form.arizadetay}}
+  <br><br>
+
+<button type="submit" class="btn btn-outline-danger" value="Arıza Oluştur"> ARIZA OLUSTUR </button>
+<button type="reset" class="btn btn-outline-danger" value="Sıfırla"> SIFIRLA </button>
+<button type="button" onclick="window.location.href='/homePage';" class="btn btn-outline-danger">İptal Et</button>
+
+</form>
+
   <br>
   <br>
 
-  <div class="form-group">
-    <label for="comment">Arıza Detaylarını belirtiniz</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
-  </div>
-  <button type="button" onclick="window.location.href='/homePage';" class="btn btn-outline-danger">İptal Et</button>
-  <button type="button" onclick="window.location.href='/homePage';" class="btn btn-outline-primary">Arıza Oluştur</button>
+  
+  
+  
 
 
 
