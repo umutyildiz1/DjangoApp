@@ -1,5 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b8f1839aca08b22e0ce00df8c8565f4de541783a
 # Create your models here.
 
 class ariza(models.Model):
