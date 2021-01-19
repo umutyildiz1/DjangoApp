@@ -116,15 +116,5 @@ def mesajj(request):
 def forgotPassword(request):
   return render(request,"forgotPassword.html")
 
-'''def profile(request):
-    form = profileForm()
-    currentUser = request.user
-    context = {'form': form}
-    if request.user.is_authenticated:
-        if request.method == "GET":
-            form = profileForm(request.GET)
-            if form.is_valid():
-                userInfo = extendedUsers.objects.filter(username=currentUser.username)
-                context = {'form': form, "userInfo": userInfo}
-
-    return render(request, "profile.html", context)'''
+def profile(request):
+    return render(request, "profile.html")

@@ -49,10 +49,3 @@ class filterForm(ModelForm):
     class Meta:
         model = ariza1
         fields = ['sehir', 'mahalle', 'ariza']
-
-
-'''class profileForm(forms.Form):
-    name = forms.CharField(max_length=50, label="Ad")
-    surname = forms.CharField(max_length=10, label="Soyad")
-    cell = forms.CharField(max_length=10, label="Telefon")
-    email = forms.EmailField(max_length=50)'''
