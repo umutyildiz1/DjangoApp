@@ -9,6 +9,8 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import login,authenticate,logout
 from .models import ariza1
+from .models import *
+from .forms import *
 
 from django.contrib import messages
 # Create your views here.
@@ -16,7 +18,15 @@ from django.contrib import messages
 
 
 def acikarizalar(request):
-  return render(request,"acikarizalar.html")
+    form = filterForm()
+    arizalar = ariza1.objects.all()
+    if request.method == "POST":
+        form = filterForm(request.POST)
+        if form.is_valid():
+                arizalar = ariza1.objects.filter(sehir=form.cleaned_data['sehir'], mahalle=form.cleaned_data['mahalle'], ariza=form.cleaned_data['ariza'])
+
+    context = {'form': form, 'arizalar': arizalar}
+    return render(request,"acikarizalar.html", context)
 
 def map(request):
   return render(request,"map.html")
@@ -101,10 +111,20 @@ def aboutUs(request):
   return render(request,"aboutUs.html")
 
 def mesajj(request):
-  return render(request,"mesajj.html")
+    return render(request,"mesajj.html")
 
 def forgotPassword(request):
   return render(request,"forgotPassword.html")
 
-def profile(request):
-  return render(request,"profile.html")
+'''def profile(request):
+    form = profileForm()
+    currentUser = request.user
+    context = {'form': form}
+    if request.user.is_authenticated:
+        if request.method == "GET":
+            form = profileForm(request.GET)
+            if form.is_valid():
+                userInfo = extendedUsers.objects.filter(username=currentUser.username)
+                context = {'form': form, "userInfo": userInfo}
+
+    return render(request, "profile.html", context)'''

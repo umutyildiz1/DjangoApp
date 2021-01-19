@@ -5,23 +5,49 @@
 {% block body %}
 
 <link rel="stylesheet" href="{% static 'acikariza.css' %}">
-<div class="container">
-  <h2>AÇIK ARIZALAR</h2>
-  <br><br>
-  <div class="card" style="width: 18rem;">
+<div style="margin-top: 15vh;" class="container">
 
-    <a class="list-group-item" href="../arizaDetay">Ahmet Bey - Lastik Arızası</a>
+    <div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<h3 style="color: dodgerblue;">Açık Arızalar</h3>
+				</div>
+                <div class="card card-body">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form }}
+                        <button type="submit" class="btn btn-outline-danger" value="Filtre">Filtrele</button>
+                    </form>
+				</div>
+				<div class="card card-body">
+					<table class="table">
+						<tr>
+							<th>Şehir</th>
+							<th>Mahalle</th>
+							<th>Arıza Tipi</th>
+                            <th>Arıza Detay</th>
+                            <th>İletişim</th>
+						</tr>
 
-    <a class="list-group-item" href="../arizaDetay">Mehmet Bey - Çekici</a>
-    <a class="list-group-item" href="../arizaDetay">Ali Bey - Akü takviyesi</a>
-    <a class="list-group-item" href="../arizaDetay">Veli Bey - Lastik Tamiri</a>
-    <a class="list-group-item" href="../arizaDetay">Hakan Bey - Akü Takviyesi</a>
+                        {% for i in arizalar %}
+                            <tr>
+                                <td>{{ i.sehir }}</td>
+                                <td>{{ i.mahalle }}</td>
+                                <td>{{ i.ariza }}</td>
+                                <td>{{ i.arizadetay }}</td>
+                                <td><button type="submit" onclick="window.location.href='../mesajj'" class="btn btn-outline-primary" value="arizaDetay">Mesaj</button></td>
+                            </tr>
+
+                        {% endfor %}
+
+					</table>
+				</div>
+			</div>
+
+		</div>
 
 
   </div>
 </div>
-
-
-
 
 {% endblock body %}

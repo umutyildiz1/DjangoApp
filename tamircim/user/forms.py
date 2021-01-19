@@ -1,4 +1,6 @@
 from django import forms #django nun kendi içinde form clası var
+from django.forms import ModelForm
+from .models import *
 
 
 class LoginForm(forms.Form):
@@ -13,6 +15,12 @@ class RegisterForm(forms.Form):
     password=forms.CharField(max_length=10,label="Parola",widget=forms.PasswordInput)
     confirm = forms.CharField(max_length=10,label="Parolayı doğrula",widget=forms.PasswordInput)
     email = forms.EmailField(max_length=50)
+    USERTYPE = (
+        ('kullanıcı', 'Kullanıcı'),
+        ('tamirci', 'Tamirci')
+    )
+    userType= forms.CharField(label='Kullanıcı Tipi', widget=forms.Select(choices=USERTYPE))
+
    
     def clean(self):   # clean metodunu override ettik djangonun kendi içinde var ( parola kontrol için)
         username = self.cleaned_data.get("username")
@@ -29,7 +37,6 @@ class RegisterForm(forms.Form):
         return values
 
 
-
 class arizaform(forms.Form):
     sehir=forms.CharField(max_length=25)
     mahalle=forms.CharField(max_length=25)
@@ -37,9 +44,15 @@ class arizaform(forms.Form):
     tamirci=forms.CharField(max_length=25)
     arizadetay=forms.CharField(max_length=250)
 
-   
+
+class filterForm(ModelForm):
+    class Meta:
+        model = ariza1
+        fields = ['sehir', 'mahalle', 'ariza']
 
 
-
-
-    
+'''class profileForm(forms.Form):
+    name = forms.CharField(max_length=50, label="Ad")
+    surname = forms.CharField(max_length=10, label="Soyad")
+    cell = forms.CharField(max_length=10, label="Telefon")
+    email = forms.EmailField(max_length=50)'''

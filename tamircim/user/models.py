@@ -1,10 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-<<<<<<< HEAD
-=======
 
-
->>>>>>> b8f1839aca08b22e0ce00df8c8565f4de541783a
 # Create your models here.
 
 class ariza(models.Model):
@@ -21,7 +17,6 @@ class ariza1(models.Model):
      tamirci=models.CharField(max_length=30,null=True)
      arizadetay=models.CharField(max_length=50,null=True)
 
-    
 
 class tamirci(models.Model):
     tamirci=models.ForeignKey("auth.user",on_delete=models.CASCADE)
@@ -59,6 +54,9 @@ class extendedUsers(models.Model):
     surname=models.CharField(max_length=50)
     email=models.CharField(max_length=255, unique=True)
     password=models.CharField(max_length=255)
-    gender=models.CharField(max_length=6)
     phone=models.CharField(max_length=10)
-    birthDay=models.DateField()
+    USERTYPE=(
+        ('kullanıcı', 'Kullanıcı'),
+        ('tamirci', 'tamirci')
+    )
+    userType = models.CharField(max_length=20, choices=USERTYPE)
